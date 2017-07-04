@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # The controller part tells devise we need to edit some of it's functionality
   devise_for :users, controllers: { registrations: 'users/registrations' }
   
-  # 1 Profile per user
   resources :users do
     resource :profile
   end
@@ -12,8 +11,8 @@ Rails.application.routes.draw do
   # "Resources" is a short way to include all 7 possible routes
   # "Only" limits the resources to a particular route
   resources :contacts, only: :create 
-  
-  # Custom URLS
-  # as is a prefix to the particular directory
+
+  # Custom URLS 
+  # 'as' is a prefix to the particular directory
   get 'contact-us', to: 'contacts#new' , as: 'new_contact'
 end
