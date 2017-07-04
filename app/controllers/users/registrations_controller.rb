@@ -34,7 +34,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       # Do not do this while the user is selecting plan 1 or 2
       unless (params[:plan] == '1' || params[:plan] == '2')
         # Rediect the user to the homepage with a warning
-        flash[:notice] = "Please select a membership plan to sign up."
+        flash[:notice] = "Please select a valid membership plan to sign up."
         redirect_to root_url
       end
     end
