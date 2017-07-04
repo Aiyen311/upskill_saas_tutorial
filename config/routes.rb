@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   resources :contacts, only: :create 
 
   # Custom URLS 
-  # 'as' is a prefix to the particular directory
+  # 'as' is a prefix to the particular directory  
   get 'contact-us', to: 'contacts#new' , as: 'new_contact'
 end
