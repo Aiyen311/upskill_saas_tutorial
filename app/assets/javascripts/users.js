@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function(){
     event.preventDefault();
     
     // Grey's out the submit button while user is filling the form
-    submitBtn.val("Processing").prop('disabled', true);
+    submitBtn.val("Processing...").prop('disabled', true);
   
     // Collect the info in credit card fields
     var ccNum = $('#card_number').val(),
