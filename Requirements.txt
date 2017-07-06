@@ -11,3 +11,11 @@ Stripe Integration
 plan 1 or plan 2.
 * Once validated, Rails should send user info (email, plan id) and card token to Stripe server and Stripe will create a subscription
 and send back customer token. Rails should save token and user info for database. 
+
+User Profiles 
+* Each user should have 1 profile
+* User should see a link to the new profile form upon signing up
+* Users should be able to create and view their user profile
+* User profile should have a profile picture
+* Users should be able to view each other's profile
+* Pro members are the only people that can see the contact information
